@@ -1,8 +1,7 @@
-work_dir: work_dir/ntu60/xsub/joint
-# work_dir: work_dir/ntu60/xsub/joint_motion
-# work_dir: work_dir/ntu60/xsub/bone
-# work_dir: work_dir/ntu60/xsub/bone_motion
-
+work_dir: work_dir/ntu60/xview/joint
+# work_dir: work_dir/ntu60/xview/joint_motion
+# work_dir: work_dir/ntu60/xview/bone
+# work_dir: work_dir/ntu60/xview/bone_motion
 
 num_epoch: 100
 cuda: True
@@ -12,7 +11,7 @@ device: 0
 model_args:
   model_name: fcsa_gcn.Model
   num_classes: 60
-  input_channels: 3 #6
+  input_channels: 3 #6 
   residual: True
   dropout: 0.5
   num_person: 2
@@ -28,14 +27,14 @@ optimizer_args:
   nesterov: True
   weight_decay: 0.0005
   warm_up_epoch: 5
-  cosine_epoch: 60
+  cosine_epoch: 60 #80
 
 
 # TRAIN TEST FEEDER
 feeder: feeders.feeder.Feeder
 train_feeder_args:  
-  data_path: C:/Users/ugurk/Desktop/WORKSPACE/Dataset/NTU/ntu60/xsub/train_data_joint.npy
-  label_path: C:/Users/ugurk/Desktop/WORKSPACE/Dataset/NTU/ntu60/xsub/train_label.pkl
+  data_path: C:/Users/ugurk/Desktop/WORKSPACE/Dataset/NTU/ntu60/xview/train_data_joint.npy
+  label_path: C:/Users/ugurk/Desktop/WORKSPACE/Dataset/NTU/ntu60/xview/train_label.pkl
   normalization: False
   random_shift: False
   random_choose: False
@@ -46,8 +45,8 @@ train_feeder_args:
   
   
 test_feeder_args:
-  data_path: C:/Users/ugurk/Desktop/WORKSPACE/Dataset/NTU/ntu60/xsub/val_data_joint.npy
-  label_path: C:/Users/ugurk/Desktop/WORKSPACE/Dataset/NTU/ntu60/xsub/val_label.pkl
+  data_path: C:/Users/ugurk/Desktop/WORKSPACE/Dataset/NTU/ntu60/xview/val_data_joint.npy
+  label_path: C:/Users/ugurk/Desktop/WORKSPACE/Dataset/NTU/ntu60/xview/val_label.pkl
   normalization: False
   random_shift: False
   random_choose: False
