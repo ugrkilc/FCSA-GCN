@@ -3,7 +3,7 @@
 This repo is the official implementation for <mark>FCSA-GCN: Fine-to-Coarse Self-Attention Graph Convolutional Network for Skeleton-Based Action Recognition</mark>. 
 
 # Architecture of FCSA-GCN
-![image](https://github.com/ugrkilc/FCSA-GCN/blob/main/figures/agms-gcn.jpg)
+![image](https://github.com/ugrkilc/FCSA-GCN/blob/main/figures/fcsa-gcn.jpg)
 # Data Preparation
 ### There are 3 datasets to download:
 - NTU RGB+D 60 Skeleton
